@@ -2,14 +2,14 @@
 <html>
 <head>
     <meta charset='utf-8' />
-    <title>Display a map</title>
+    <title>2011 dngts</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.js'></script>
     <script src='./data.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
     <style>
         body { margin:0; padding:0; }
-        #map { position:absolute; top:0; bottom:0; width:100%; }
+        #map { position:absolute; top:0; bottom:0; width:85%; }
     </style>
 </head>
 <body>
@@ -35,18 +35,29 @@ map.on('load', function() {
         },
            'paint': {
                 'fill-extrusion-color' : {
-                    'property': 'p_tot',
+                   'property': 'p_tot_11',
                     "stops":[
-                    	[0, 'white'],
-                    	[50, 'orange']
+                    	[0, 'lightcyan'],
+                    	[120, 'turquoise'],
+                        [269,'teal'],
+                        [379,'steelblue'],
+                        [552,'royalblue'],
+                        [1266,'mediumblue'],
+                        [2523,'darkblue'],
+                        [11500,'midnightblue']
                     ]
                     
                 },
                 'fill-extrusion-height' : {
-                    'property': 'dngts_tot',
+                    'property': 'dngts_11',
                     "stops":[
-                    	[0.2, 0],
-                    	[1, 50000]
+                    	[0, 0],
+                    	[10, 1000],
+                        [20, 2000],
+                        [30, 3000],
+                        [50, 6000],
+                        [200,20000],
+                        [380,38000]
                     ]
                 },
                  'fill-extrusion-opacity': 1
